@@ -12,6 +12,7 @@
 
 #include <iostream>
 
+#define watch(x) cout << (#x) << " is " << (x) << '\n' 
 
 using namespace std;
 
@@ -20,6 +21,7 @@ using namespace std;
 short CountBits(unsigned int x) {
 	short num_bits = 0; 
 	while (x) {
+		watch(x);
 		num_bits += x & 1; 
 		x >>= 1;
 	}

@@ -37,13 +37,9 @@ short Parity(unsigned long x) {
     cout << "final" << '\n';
     watch(result);
     return result; 
-
 }
 
-
-TEST_CASE("Parities computed","[Parity]") {
-
-    // stuff
+TEST_CASE("Test cases for parity bits", "[Parity]") {
     SECTION("Binary 1") {
 	START;
 	unsigned long x = 10; 
@@ -64,6 +60,4 @@ TEST_CASE("Parities computed","[Parity]") {
     }
     
 }
-
-
 

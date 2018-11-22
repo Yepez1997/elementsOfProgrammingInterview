@@ -1,3 +1,6 @@
+// given an amount in cents returns the min number of 
+// coins to complete that amount
+
 #include <iostream>
 #include <algorithm>
 #include <vector> 

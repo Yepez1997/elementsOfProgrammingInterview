@@ -1,13 +1,14 @@
-
+/* num_score_comb.cpp : choses the various 
+ * 2 point, 3 point, 7 point plays from 
+ * a score in footall 
+ * Assumes if 7 point play then a td and field goal 
+ * */
 
 #include <iostream>
 #include <vector> 
 
 using namespace std; 
 
-
-
-//TEST
 
 int NumCombinationsForFinalScore(int final_Score, const vector<int>& individual_play_scores) {
     

@@ -13,17 +13,16 @@ int FindMinimumVisits(vector<Interval> intervals) {
 	// learn this cheeaaattt
 	sort(begin(intervals), end(intervals), [](const Interval& a, const Interval& b) { return a.right < b.right; });
 	
-	for (Interval i : intervals) {
-		cout << "(" << i.left << "," << i.right << ")" << '\n';
-	}
-	
+	// place holder 
 	int last_visit_time = numeric_limits<int>::min();
  	int num_visits = 0;
 	
 	for (const Interval& interval : intervals) { 
+		cout << "left: " << interval.left << endl;
+		cout << "last time visit: " << last_visit_time <<endl;   
 		if (interval.left > last_visit_time) {
 			last_visit_time = interval.right; 
-			cout << last_visit_time << endl;
+			cout << "last time visit in loop: " << last_visit_time << endl;
 			++num_visits;
 			 
 		}

@@ -24,7 +24,7 @@ class Stack {
 			if (Empty()) {
 				throw length_error("Max(): empty stack"); 
 			}
-			cout << "Max: " << element_with_cached_max_.top().max << endl;
+			//cout << "Max: " << element_with_cached_max_.top().max << endl;
 			return element_with_cached_max_.top().max; 
 		}
 		
@@ -43,7 +43,7 @@ class Stack {
 			cout << "Push: " << x << endl; 
 		}
 		
-		
+			
 	private: 
 		struct ElementWithMaxCache {
 			int element; 
@@ -61,10 +61,7 @@ int main() {
 	new_stack.Push(10);
 	new_stack.Push(2);
 	new_stack.Push(0);
-	new_stack.Pop();  // should get 0 ? 
-	new_stack.Max();
-	new_stack.Pop();
-	
+	 
 	
 	return 0; 
 }

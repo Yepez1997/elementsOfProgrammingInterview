@@ -5,6 +5,7 @@
 #include <string>
 #include <stack>
 
+// DEBUG THISSSS 
 
 using namespace std; 
 
@@ -19,7 +20,7 @@ int evaluate(const string& expression) {
 		// completion functions ? 
 		{"+", [](int x, int y) -> int {return x + y;}},
 		{"-", [](int x, int y) -> int {return x - y;}},
-		{"*", [](int x, int y) -> int {return x * y;}},
+		{"x", [](int x, int y) -> int {return x * y;}},
 		{"/", [](int x, int y) -> int {return x / y;}}};
 	
 	while (getline(ss, token, delimeter)) {
@@ -27,7 +28,8 @@ int evaluate(const string& expression) {
 			const int y = inter_result.top(); 
 			inter_result.pop();
 			const int x = inter_result.top(); 
-			inter_result.pop(); 
+			inter_result.pop();
+            // call lambda expression with x and y 
 			inter_result.emplace(kOperators.at(token)(x,y));
 		}
 		else {
@@ -40,7 +42,7 @@ int evaluate(const string& expression) {
 
 int main() {
 	
-	string input = "3,4,+,2,*,1"; 
+	string input = "3,4,+,2,x,1"; 
 	int result = evaluate(input);
 	cout << result << endl;
 	 

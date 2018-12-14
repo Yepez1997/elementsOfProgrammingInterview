@@ -1,9 +1,16 @@
+/* twoSum: let alpha be an array with elements x0, x1, ... xn 
+ * in a set of real numbers. Given alpha deteramine if elements 
+ * i and j in the array x0 <= i , j <= n add up to a target sum.
+ * if so return true, else return fasle
+ * */
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
 
+/* note this is just one implementaion, can be solved wiht a map */
 using namespace std; 
-
+/* algorithm for finding two sum*/
 bool hasTwoSum(vector<int>& a, int t) {
 	sort(begin(a), end(a)); 
 	
@@ -36,3 +43,6 @@ int main() {
 	  
 	return 0; 
 }
+
+// other stuff to note : common in interview is indexing in the right places ...
+//  

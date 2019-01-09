@@ -5,9 +5,12 @@ import math
 Outputs a Spiral Array 
 """
 
+# Tip: when workign with array always want to keep track of indicies 
+
 #first thing -> determain size want to create an n * n matrix 
 # n x n matricies are perfect squares
-# key to this problem is to keep trasck of your cordinates 
+# key to this problem is to keep trasck of your cordinates using yield 
+
 def spiralOrder(matrix):
         def spiral_coords(r1, c1, r2, c2):
             ## first do the colums left to right on top
@@ -36,16 +39,23 @@ def spiralOrder(matrix):
         while row1 <= row2 and col1 <= col2:
             for r, c in spiral_coords(row1, col1, row2, col2):
                 ans.append(matrix[r][c])
-                print(r) 
+                print(r)
                 print(c)
-                print("enter matrix")
-                print(matrix[r][c])
-                print("distinguish")
             # once we are done with the first clock cycle, want to reduce the size 
             # of the matrix to keep values in order 
             row1 += 1; row2 -= 1
             col1 += 1; col2 -= 1
         return ans
+
+
+def testfor():
+    for i in range(len("1111111")):
+        print("i")
+        print(i)
+
+
+testfor()
+
 
 """
 Thinking :  fill up the first row 0 with i to n
@@ -92,8 +102,5 @@ def tests():
     assert(spiralOrder(input_one) == output_one)
     print("Passed test case")
     return 0
-
-
-tests()
 
 

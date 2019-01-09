@@ -4,8 +4,7 @@
 
 
 using namespace std; 
-
-// review    
+  
 const int kNumPegs = 5;
 
 /*main alg and juice */
@@ -30,13 +29,14 @@ vector<vector<int>> ComputeTowerHanoi(int num_rings) {
     }
 }
 
+/*results vector*/
 vector<vector<int>> results; 
 
 ComputeTowerHanoiSteps(num_rings,pegs, 0, 1, 2, &results); 
 
 return result; 
 
-
+/*temporary*/
 int main() {
 
     return 0; 

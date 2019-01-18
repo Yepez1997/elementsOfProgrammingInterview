@@ -3,6 +3,8 @@
 #include <iostream>
 #include <unordered_map>
 
+using namespace std;
+
 unordered_map<int,int> cache; 
 
 /* DP Fibonacci with cache 
@@ -14,10 +16,8 @@ int Fibonacci (int n) {
     }
 
     else if (!cache.count(n)) {
-        cache[n] = Fibonacci(n-2) + Fibonacci()
+        cache[n] = Fibonacci(n-2) + Fibonacci(n-1);
     }
-
-
 }
 
 /* FibonacciOpt: helps reduce space complexity by storing in bottom
